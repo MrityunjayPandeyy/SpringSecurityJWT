@@ -1,0 +1,56 @@
+{
+	"variables": [],
+	"info": {
+		"name": "jwt",
+		"_postman_id": "dafa46b9-ea2f-e962-1022-eaae2dcb0e5d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "jwt",
+			"request": {
+				"url": "http://localhost:8084/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"userName\" : \"Mrityunjay\",\n\"id\" :\"123\",\n\"role\" :\"admin\"\n}"
+				},
+				"description": "jwt rtrv webtoken"
+			},
+			"response": []
+		},
+		{
+			"name": "jwt",
+			"request": {
+				"url": "http://localhost:8084/rest/login",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorisation",
+						"value": "Token yJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNcml0eXVuamF5IiwidXNlcklkIjoiMTIzIiwicm9sZSI6ImFkbWluIn0.GxUx2frFfylNhL2pIdBoGBKVbCExUYB02gql6xh8au6Jx4WpIsSa2VYLsgepGqDDZ_s9GCzPBhxiwlGXoeePbQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"userName\" : \"Mrityunjay\",\n\"id\" :\"123\",\n\"role\" :\"admin\"\n}"
+				},
+				"description": "jwt rtrv webtoken"
+			},
+			"response": []
+		}
+	]
+}
